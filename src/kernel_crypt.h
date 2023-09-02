@@ -1,7 +1,7 @@
 #ifndef KERNELCRYPT_KERNEL_CRYPT_H
 #define KERNELCRYPT_KERNEL_CRYPT_H
 
-#include "stdio.h"
+#include <linux/stddef.h>
 #include "utils/vrg.h"
 #include "utils/types.h"
 

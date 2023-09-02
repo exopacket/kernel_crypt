@@ -5,7 +5,7 @@
 #ifndef KERNELCRYPT_TYPES_H
 #define KERNELCRYPT_TYPES_H
 
-enum bits {s_512, s_384, s_256, s_192, s_128};
+enum bits {s_512 = 512, s_384 = 384, s_256 = 256, s_192 = 192, s_128 = 128};
 typedef enum bits bits_t;
 
 enum encoding {base64, hex, bytes};
