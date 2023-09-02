@@ -1,4 +1,3 @@
-#include <linux/stddef.h>
 #include "kernel_crypt.h"
 #include "utils/types.h"
 
