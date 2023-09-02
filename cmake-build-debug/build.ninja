@@ -52,36 +52,42 @@ build cmake_object_order_depends_target_KernelCrypt: phony || CMakeFiles/KernelC
 build CMakeFiles/KernelCrypt.dir/src/kernel_crypt.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/kernel_crypt.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/kernel_crypt.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src
 
 build CMakeFiles/KernelCrypt.dir/src/aes/aes.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/aes/aes.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/aes/aes.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src/aes
 
 build CMakeFiles/KernelCrypt.dir/src/utils/hex.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/utils/hex.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/utils/hex.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src/utils
 
 build CMakeFiles/KernelCrypt.dir/src/sha/sha.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/sha/sha.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/sha/sha.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src/sha
 
 build CMakeFiles/KernelCrypt.dir/src/utils/b64.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/utils/b64.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/utils/b64.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src/utils
 
 build CMakeFiles/KernelCrypt.dir/src/random/rand.c.o: C_COMPILER__KernelCrypt_unscanned_Debug /root/CLionProjects/KernelCrypt/src/random/rand.c || cmake_object_order_depends_target_KernelCrypt
   DEP_FILE = CMakeFiles/KernelCrypt.dir/src/random/rand.c.o.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  INCLUDES = -I/usr/src/linux-headers-5.15.0-79/include -I/usr/include/linux -I/usr/src/linux-headers-5.19.0-32-generic/include
   OBJECT_DIR = CMakeFiles/KernelCrypt.dir
   OBJECT_FILE_DIR = CMakeFiles/KernelCrypt.dir/src/random
 
