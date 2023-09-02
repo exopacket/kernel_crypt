@@ -25,8 +25,8 @@ Example:
     int my_func(int a, char b, void *c);
 
     #define myfunc(...)     vrg(myfunc, __VA_ARGS__)
-    #define myfunc1(a)      my_func(a,'\0',NULL)
-    #define myfunc2(a,b)    my_func(a,b,NULL)
+    #define myfunc1(a)      my_func(a,'\0',((void *) 0))
+    #define myfunc2(a,b)    my_func(a,b,((void *) 0))
     #define myfunc3(a,b,c)  my_func(a,b,c)
 
 # Command line options
@@ -70,13 +70,6 @@ Example:
 
 #ifndef VRG_VERSION
 #define VRG_VERSION 0x0001001C
-
-#include <stdio.h>
-#include <stdint.h>
-#include <string.h>
-#include <errno.h>
-#include <stdlib.h>
-#include <ctype.h>
 
 // Variadic functions
 
@@ -137,7 +130,7 @@ static int   vrglen=-1;
 static int vrg_maxlen = 0;
 static int vrg_count;
 static int vrg_argc;
-static char **vrg_argv=NULL;
+static char **vrg_argv=((void *) 0);
 
 static int vrg_numopts=0;
 
@@ -187,7 +180,7 @@ static int vrg_isopt(char *opt)
   int opt_ndx=0;
   char *arg=vrg_argv[vrgargn];
 
-  if (arg == NULL || arg[0]!= '-') return 0;
+  if (arg == ((void *) 0) || arg[0]!= '-') return 0;
 
   vrgoptarg = vrg_emptystr;
   vrglen = 0;
