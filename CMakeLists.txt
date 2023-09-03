@@ -18,15 +18,11 @@ find_path(
         PATHS /usr/src/linux-headers-${KERNEL_RELEASE}
 )
 
-#set(KERNELHEADERS_DIR /usr/src/linux-headers-5.19.0-32-generic)
-
 message(STATUS "Kernel release: ${KERNEL_RELEASE}")
 message(STATUS "Kernel headers: ${KERNELHEADERS_DIR}")
 
 include_directories(
         ${KERNELHEADERS_DIR}/include
-#        /usr/include
-#        /usr/src/linux-source-5.15.0/include
 )
 
 set(DRIVER_FILE mod_template.ko)
