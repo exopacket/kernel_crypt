@@ -7,6 +7,6 @@
 
 #include "../utils/types.h"
 
-void fill_srand(bits_t bits, unsigned char* out);
+int fill_srand(unsigned char* out, bits_t bits);
 
 #endif //KERNELCRYPT_RAND_H

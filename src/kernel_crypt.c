@@ -19,10 +19,10 @@ int encrypt_f(
 
         unsigned char key[s];
         if(_key == ((void *) 0)) {
-            fill_srand(bits, key);
+            fill_srand(key, bits);
         }
 
-        printk("test");
+        printk("test=%d", key[0]);
 
     }
 
