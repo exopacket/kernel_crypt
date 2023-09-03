@@ -10,17 +10,17 @@ MODULE_DESCRIPTION("Linux kernel module template");
 MODULE_LICENSE("GPL");
 MODULE_ALIAS("mod_template");
 
-static int __init mt_init(void)
+static int __init modtemplate_init(void)
 {
-    printk("Module loaded.");
+    printk(KERN_ALERT "Module loaded.\n");
 
     return 0;
 }
 
-static void __exit mt_exit(void)
+static void __exit modtemplate_exit(void)
 {
-    printk("Module unloaded.");
+    printk(KERN_ALERT "Module unloaded.\n");
 }
 
-module_init(mt_init);
-module_exit(mt_exit);
+module_init(modtemplate_init);
+module_exit(modtemplate_exit);

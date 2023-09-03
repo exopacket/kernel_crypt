@@ -18,6 +18,8 @@ find_path(
         PATHS /usr/src/linux-headers-${KERNEL_RELEASE}
 )
 
+#set(KERNELHEADERS_DIR /usr/src/linux-headers-5.19.0-32-generic)
+
 message(STATUS "Kernel release: ${KERNEL_RELEASE}")
 message(STATUS "Kernel headers: ${KERNELHEADERS_DIR}")
 
@@ -34,7 +36,7 @@ FILE(WRITE
         ${CMAKE_CURRENT_SOURCE_DIR}/Kbuild
 "obj-m := mod_template.o
 KVERSION:=$(shell uname -r)
-KDIR:= /lib/modules/$(KVERSION)/build
+KDIR:= ${KERNELHEADERS_DIR}
 PWD:= $(shell pwd)
 
 all:
