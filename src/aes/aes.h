@@ -8,31 +8,31 @@
 #include "../utils/types.h"
 
 int aes_ecb_encdec(
-        unsigned char* input,
-        unsigned char* output,
+        unsigned char *input,
+        unsigned char *output,
         bits_t bits,
-        unsigned char* key,
+        unsigned char *key,
         encoding_t encoding,
         int encrypt
 );
 
 int aes_cbc_encdec(
-        unsigned char* input,
-        unsigned char* output,
+        unsigned char *input,
+        unsigned char *output,
         bits_t bits,
-        unsigned char* key,
-        unsigned char* iv,
+        unsigned char *key,
+        unsigned char *iv,
         encoding_t encoding,
         int encrypt
 );
 
 int aes_gcm_encdec(
-        unsigned char* input,
-        unsigned char* output,
+        unsigned char *input,
+        unsigned char *output,
         bits_t bits,
-        unsigned char* key,
-        unsigned char* iv,
-        unsigned char* tag,
+        unsigned char *key,
+        unsigned char *iv,
+        unsigned char *tag,
         encoding_t encoding,
         int encrypt
 );

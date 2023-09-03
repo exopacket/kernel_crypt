@@ -6,13 +6,13 @@
 
 alg_t default_alg = aes_cbc;
 bits_t default_bits = s_256;
-unsigned char* default_key = ((void *) 0);
-unsigned char* default_iv = ((void *) 0);
+unsigned char *default_key = ((void *) 0);
+unsigned char *default_iv = ((void *) 0);
 encoding_t default_encoding = bytes;
 
 alg_t default_alg_h = sha3;
 bits_t default_bits_h = s_384;
-unsigned char* default_key_h = ((void *) 0);
+unsigned char *default_key_h = ((void *) 0);
 encoding_t default_encoding_h = hex;
 
 #define encrypt(...)                                          vrg(encrypt_f, __VA_ARGS__)
@@ -39,32 +39,32 @@ encoding_t default_encoding_h = hex;
 #define hash_f6(arg1, arg2, arg3, arg4, arg5, arg6)           hash_f(arg1, arg2, arg3, arg4, arg5, arg6)
 
 int encrypt_f(
-        unsigned char* input,
-        crypto_res_t* output,
+        unsigned char *input,
+        crypto_res_t *output,
         alg_t algorithm,
         bits_t bits,
-        unsigned char* key,
-        unsigned char* iv,
+        const unsigned char *key,
+        unsigned char *iv,
         encoding_t encoding
 );
 
 int decrypt_f(
-        unsigned char* input,
-        crypto_res_t* output,
+        unsigned char *input,
+        crypto_res_t *output,
         alg_t algorithm,
         bits_t bits,
-        unsigned char* key,
-        unsigned char* iv,
+        unsigned char *key,
+        unsigned char *iv,
         encoding_t encoding
 );
 
 int hash_f(
-        unsigned char* input,
-        hash_res_t* output,
+        unsigned char *input,
+        hash_res_t *output,
         alg_t algorithm,
         bits_t bits,
-        unsigned char* key,
+        unsigned char *key,
         encoding_t encoding
 );
 
-#endif //KERNELCRYPT_KERNEL_CRYPT_H
+#endif

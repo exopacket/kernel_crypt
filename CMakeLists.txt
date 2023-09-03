@@ -25,15 +25,18 @@ include_directories(
         ${KERNELHEADERS_DIR}/include
 )
 
-set(DRIVER_FILE mod_template.ko)
+set(OBJECTS "src/kernel_crypt.o src/aes/aes.o src/utils/hex.o src/sha/sha.o src/utils/b64.o src/random/rand.o")
+set(DRIVER_FILE mymodule.ko)
 set(KBUILD_CMD $(MAKE) -C ${KERNELHEADERS_DIR} modules M=${CMAKE_CURRENT_BINARY_DIR} src=${CMAKE_CURRENT_SOURCE_DIR})
 
 FILE(WRITE
         ${CMAKE_CURRENT_SOURCE_DIR}/Kbuild
-"obj-m := mod_template.o
+"KDIR:=${KERNELHEADERS_DIR}
 KVERSION:=$(shell uname -r)
-KDIR:= ${KERNELHEADERS_DIR}
-PWD:= $(shell pwd)
+PWD:=$(shell pwd)
+
+obj-m+=mymodule.o
+mymodule-y:=mod_template.o ${OBJECTS}
 
 all:
 \tmake -C $(KDIR) M=$(PWD) modules
@@ -47,22 +50,3 @@ add_custom_command(OUTPUT ${DRIVER_FILE}
         DEPENDS mod_template.c VERBATIM)
 
 add_custom_target(driver ALL DEPENDS ${DRIVER_FILE})
-
-#add_library(
-#        kernel_crypt
-##        src/kernel_crypt.c
-##        src/kernel_crypt.h
-##        src/aes/aes.h
-##        src/aes/aes.c
-##        src/utils/hex.c
-##        src/utils/hex.h
-##        src/sha/sha.c
-##        src/sha/sha.h
-##        src/utils/b64.c
-##        src/utils/b64.h
-##        src/random/rand.c
-##        src/random/rand.h
-##        src/utils/types.h
-##        src/utils/vrg.h
-#        mod_template.c
-#)

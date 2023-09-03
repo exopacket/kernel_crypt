@@ -1,43 +1,39 @@
-//
-// Created by root on 9/2/23.
-//
-
 #ifndef KERNELCRYPT_TYPES_H
 #define KERNELCRYPT_TYPES_H
 
-enum bits {s_512 = 512, s_384 = 384, s_256 = 256, s_192 = 192, s_128 = 128};
-typedef enum bits bits_t;
+typedef enum {
+    s_512 = 512, s_384 = 384, s_256 = 256, s_192 = 192, s_128 = 128
+} bits_t;
 
-enum encoding {base64, hex, bytes};
-typedef enum encoding encoding_t;
+typedef enum {
+    base64, hex, bytes
+} encoding_t;
 
-enum algs {aes_cbc, aes_gcm, aes_ecb, sha1, sha1_hmac, sha3, sha3_hmac};
-typedef enum algs alg_t;
+typedef enum {
+    aes_cbc, aes_gcm, aes_ecb, sha1, sha1_hmac, sha3, sha3_hmac
+} alg_t;
 
-enum statuses {failure = 0, encrypted = 1, decrypted = 1, hashed = 1};
-typedef enum statuses status_t;
+typedef enum {
+    failure = 0, encrypted = 1, decrypted = 1, hashed = 1
+} status_t;
 
-struct crypto_res {
-    unsigned char* data;
+typedef struct {
+    unsigned char *data;
 
-    unsigned char* key;
-    unsigned char* iv;
+    unsigned char *key;
+    unsigned char *iv;
 
-    unsigned char* tag;
-
-    status_t status;
-};
-
-typedef struct crypto_res crypto_res_t;
-
-struct hash_res {
-    unsigned char* data;
-
-    unsigned char* key;
+    unsigned char *tag;
 
     status_t status;
-};
+} crypto_res_t;
 
-typedef struct hash_res hash_res_t;
+typedef struct {
+    unsigned char *data;
 
-#endif //KERNELCRYPT_TYPES_H
+    unsigned char *key;
+
+    status_t status;
+} hash_res_t;
+
+#endif
