@@ -17,4 +17,10 @@ cd "${CWD}/build/" && cmake "$CWD"
 cmake --build "${CWD}/build/"
 cd "$CWD" || exit | exit
 
-echo "Build complete!"
+echo "\nBuild complete!"
+echo "\nInstalling..."
+
+rmmod build/mymodule.ko > /dev/null
+insmod build/mymodule.ko
+
+echo "Installed."
