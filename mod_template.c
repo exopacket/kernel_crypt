@@ -4,6 +4,7 @@
 
 #include <linux/kernel.h>
 #include <linux/module.h>
+#include "src/kernel_crypt.h"
 
 MODULE_AUTHOR("Me and <my@address.com>");
 MODULE_DESCRIPTION("Linux kernel module template");
@@ -12,6 +13,10 @@ MODULE_ALIAS("mod_template");
 
 static int __init modtemplate_init(void)
 {
+
+    crypto_res_t* o;
+    encrypt("test", o);
+
     printk(KERN_ALERT "Module loaded.\n");
 
     return 0;

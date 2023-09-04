@@ -1,5 +1,5 @@
-#include "kernel_crypt.h"
 #include "random/rand.h"
+#include <linux/kernel.h>
 
 int encrypt_f(
         unsigned char *input,
@@ -17,10 +17,11 @@ int encrypt_f(
 
         unsigned char key[s];
         if (_key == ((void *) 0)) {
+            printk(KERN_INFO "fill_srand\n");
             fill_srand(key, bits);
         }
 
-//        printk("test=%d", key[0]);
+        printk(KERN_INFO "test=%d\n", key[0]);
 
     }
 
