@@ -39,9 +39,9 @@ obj-m+=mymodule.o
 mymodule-y:=mod_template.o ${OBJECTS}
 
 all:
-\tmake -C $(KDIR) M=$(PWD) modules
+\t$(MAKE) -C $(KDIR) M=$(PWD) modules
 clean:
-\tmake -C $(KDIR) M=$(PWD) clean
+\t$(MAKE) -C $(KDIR) M=$(PWD) clean
 ")
 
 add_custom_command(OUTPUT ${DRIVER_FILE}
